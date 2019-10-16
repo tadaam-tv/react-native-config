@@ -203,7 +203,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "./ReactNativeConfig/BuildDotenvConfig.rb\n";
+			shellScript = "set -xe\necho \"$SRCROOT\"\n./ReactNativeConfig/BuildDotenvConfig.rb \"$SRCROOT/../../..\" \"$SRCROOT/ReactNativeConfig/\"\n";
 		};
 		EBE4E8281C7BF689000F8875 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -262,7 +262,7 @@
 				HEADER_SEARCH_PATHS = (
 					"$(SRCROOT)/../../react-native/React/**",
 					"${SYMROOT}",
-					"$(SRCROOT)/../../../ios/Pods/Headers/Public",
+					"$(SRCROOT)/../../../ios/Pods/Headers/Public/**",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -294,7 +294,7 @@
 				HEADER_SEARCH_PATHS = (
 					"$(SRCROOT)/../../react-native/React/**",
 					"${SYMROOT}",
-					"$(SRCROOT)/../../../ios/Pods/Headers/Public",
+					"$(SRCROOT)/../../../ios/Pods/Headers/Public/**",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
